@@ -1,0 +1,29 @@
+<게시판>
+
+게시판 역할
+
+글작성, 수정, 삭제
+댓글기능
+유저 로그인, 회원가입
+글목록보기 ,검색, 페이지 표기
+게시글 댓글 좋아요기능
+
+
+DB
+
+게시판 - 게시판id, 게시판이름
+유저 - 유저id, 이름, 전화번호, 이메일, 닉네임, 가입날짜, 역할(user/admin)
+게시글 - 게시글id, 제목, 내용, 유저id(fk - 유저), 작성시간,
+댓글 - 댓글id, 내용, 닉네임(유저), 작성시간
+게시글 좋아요 - id
+댓글 좋아요 - id
+
+
+Board - board_id(pk), board_name
+User - user_id(pk), name, phon, email, nickname, joined_at, role
+Post - post_id, title, content, created_at, user_id(fk), board_id(fk)
+Comment - comment_id(pk), content, created_at, user_id(fk), post_id(fk)
+PostLike - postLike_id(pk), user_id(fk), post_id(fk)
+CommentLike - CommentLike_id(pk), user_id(fk), comment_id(fk)
+File - file_id(pk),  file_name, org_file_name, file_type, uploaded_at, post_id(fk)
+ActivityLog - log_id(pk), timestamp, target_type, action_type, target_id, user_id(fk)
