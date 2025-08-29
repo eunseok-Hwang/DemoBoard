@@ -20,7 +20,7 @@ DB
 
 
 Board - board_id(pk), board_name
-User - user_id(pk), name, phon, email, nickname, joined_at, role
+User - user_id(pk), name, phon, email, nickname, password, joined_at, role
 Post - post_id, title, content, created_at, user_id(fk), board_id(fk)
 Comment - comment_id(pk), content, created_at, user_id(fk), post_id(fk)
 PostLike - postLike_id(pk), user_id(fk), post_id(fk)
